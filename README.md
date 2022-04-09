@@ -5,15 +5,15 @@ This is a clone of LXQt sudo tool (without LXQt libs). It is the *ONLY* privileg
 It works with doas (default) and sudo.
 ## Requirements
 - qt5-tools
-- qmake
+- cmake
 - make
 
 ## Building
 ```
 git clone https://github.com/git-fal7/octopi-sudo
 cd octopi-sudo
-mkdir build_dir
-cd build_dir/
-qmake-qt5 ..
+mkdir build
+cd build/
+cmake ..
 make
 ```
