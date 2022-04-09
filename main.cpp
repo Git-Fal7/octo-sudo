@@ -40,7 +40,6 @@
 #include <iostream>
 
 #include <QApplication>
-#include <QTranslator>
 #include <QFile>
 #include <QTextStream>
 
@@ -51,11 +50,6 @@ int main(int argc, char **argv)
   QApplication app(argc, argv, true);
   app.setQuitOnLastWindowClosed(false);
   app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
-
-  QTranslator translator;
-  // look up e.g. :/translations/myapp_de.qm
-  if (translator.load(QLocale(), QStringLiteral("lxqt-sudo"), QStringLiteral("_"), QStringLiteral(":/translations")))
-    app.installTranslator(&translator);
 
   Sudo s;
   return s.main();
