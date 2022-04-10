@@ -199,7 +199,7 @@ int Sudo::main()
     usage(tr("%1: no command to run provided!").arg(app_master));
     return 1;
   }
-
+  mBackend = BACK_SUDO;
   if (BACK_NONE == mBackend)
   {
     //we were invoked through unknown link (or renamed binary)
